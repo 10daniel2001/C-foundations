@@ -22,6 +22,7 @@ void memory_leak_example() {
 
 }
 
+// exemplo de uso da função memory_leak_example
 
 int main() {
     memory_leak_example();
