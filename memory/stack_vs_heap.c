@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// Sempre vai te ruma mistura de ingles e portugues, mas vou tentar usar o inglês para os comentários e português para o texto explicativo.
 
 /* Porque os endereços de memória são diferentes para variáveis alocadas na pilha e no heap
    
@@ -17,13 +18,19 @@
 
    Devido a essas diferenças, os endereços de memória das variáveis alocadas na pilha e no heap são diferentes.
    
-   
+   saida esperada:
+   Stack variable: (endereço de memória da variável na pilha)
+   Heap variable: (endereço de memória da variável no heap)
+   Stack variable: 0x7ffd7f473340
+   Heap variable: 0x5a2ed06cf6b0
+
+
 */
 
 int main() {
     // Stack allocation
     int *stackVar;
-    printf("Stack variable: %p\n", (void *)stackVar); // This will lead to undefined behavior since stackVar is uninitialized
+    printf("Stack variable: %p\n", (void *)stackVar);
 
     // Heap allocation
     int *heapVar = (int *)malloc(sizeof(int));
@@ -34,7 +41,7 @@ int main() {
     *heapVar = 20;
     printf("Heap variable: %p\n", (void *)heapVar);
 
-    // Free heap memory
+    
     free(heapVar);
 
     return 0;
