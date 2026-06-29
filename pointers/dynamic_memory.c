@@ -4,18 +4,18 @@
 
 int main() {
 
-    int* new = malloc(sizeof(int)); // Aloca memória suficiente para armazenar um inteiro e retorna um ponteiro para essa memória. O ponteiro é armazenado na variável 'novo'.
+    int* ptr = malloc(sizeof(int)); // Aloca memória suficiente para armazenar um inteiro e retorna um ponteiro para essa memória. O ponteiro é armazenado na variável 'novo'.
      // new 
 
-    if (new == NULL) { // Verifica se a alocação de memória falhou
+    if (ptr == NULL) { // Verifica se a alocação de memória falhou
     printf("Memory allocation failed\n");
     return 1; // Retorna 1 para indicar que houve um erro na alocação de memória.   
     }
 
-    *new = 10; // Atribui o valor 10 à memória alocada dinamicamente. Aqui, 'novo' é um ponteiro, então estamos armazenando o valor 10 no endereço de memória apontado por 'novo'.
+    *ptr = 10; // Atribui o valor 10 à memória alocada dinamicamente. Aqui, 'novo' é um ponteiro, então estamos armazenando o valor 10 no endereço de memória apontado por 'novo'.
 
-    printf("Value: %d\n", *new); // Imprime o valor armazenado na memória alocada dinamicamente. O operador * é usado para acessar o valor apontado pelo ponteiro 'novo'.
-    free(new); // Libera a memória alocada dinamicamente para evitar vazamentos de memória. É importante sempre liberar a memória alocada com malloc quando ela não é mais necessária.
+    printf("Value: %d\n", *ptr); // Imprime o valor armazenado na memória alocada dinamicamente. O operador * é usado para acessar o valor apontado pelo ponteiro 'novo'.
+    free(ptr); // Libera a memória alocada dinamicamente para evitar vazamentos de memória. É importante sempre liberar a memória alocada com malloc quando ela não é mais necessária.
 
     int* arr = (int*)malloc(5 * sizeof(int)); // Aloca memória para um array de 5 inteiros e retorna um ponteiro para essa memória. O ponteiro é armazenado na variável 'arr'.
    
