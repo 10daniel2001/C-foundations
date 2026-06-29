@@ -2,6 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*Struct para representar uma caixa
+  Nesta caixa tem nome e tamanho
+  
+  linha 13 e criado uma caixa, com uma funçao que retorna um ponteiro para a caixa criada
+  malloc para alocar memória do tamanho da caixa
+    
+  No main, o usuario fornece os valores para a caixa,
+  e a funçao criarcaixa é chamada para criar a caixa com os valores fornecidos
+  
+  */
+
 struct Caixa {
     int tamanho;
     char nome[20];
