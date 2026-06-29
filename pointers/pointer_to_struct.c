@@ -3,6 +3,18 @@
 
 /*Struct point ou struct ponto
   Nela esta duas variaveis inteiras guardadas 
+  X sera meu array de inteiros e Y sera um inteiro simples
+   
+  No main
+  chamo a struct Point p1, p1 e um ponteiro para struct Point, p1.x e p1.y sao ponteiros para inteiros
+  Na linha 21 e 22 aloco memoria para p1.x e p1.y, p1.x e um array de 5 inteiros e p1.y e um inteiro simples
+
+  Linha 26 e 27 verifico se a alocacao de memoria falhou, caso sim imprimo uma mensagem de erro e retorno 1
+
+  Apos puxo um for para preencher o array p1.x com valores pares e imprimo os valores de p1.x
+
+  finalizo com free para liberar a memoria alocada para p1.x e p1.y e retorno 0 para indicar que o programa terminou com sucesso
+  
   */
 
 struct Point {
