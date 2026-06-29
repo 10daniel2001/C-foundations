@@ -30,7 +30,7 @@
 int main() {
     // Stack allocation
     int *stackVar;
-    printf("Stack variable: %p\n", (void *)stackVar);
+    printf("Stack variable: %p\n", (void *)&stackVar);
 
     // Heap allocation
     int *heapVar = (int *)malloc(sizeof(int));
