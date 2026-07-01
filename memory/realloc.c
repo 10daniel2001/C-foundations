@@ -13,13 +13,22 @@ int main() {
         return 1;
     }
 
-  
+  /*arr agora recebe valores para cada indice, serao na sequencia, atualizado para arr*/
     for (int i = 0; i < 5; i++) {
         arr[i] = i + 1;
+        // Imprimindo os valores do array
+        printf("%d ", arr[i]);
+        // veremos que os valores foram armazenados corretamente, e quais sao 
+        // sera de 1 a 5, pois o for vai de 0 a 4, e o valor armazenado e i+1 
     }
 
     // Realocando memória para um array maior
+    /*Temp e um ponteiro do tipo int, e armazena o endereço da memória realocada
+    ou seja temp e o novo endereço da memória alocada
+    if para verifica se a realocação foi bem-sucedida 
+    */
     int *temp = (int *)realloc(arr, 10 * sizeof(int));
+
     if (temp == NULL) {
         fprintf(stderr, "Memory reallocation failed\n");
         free(arr); // Liberar a memória original antes de sair
