@@ -9,5 +9,5 @@ bin/
 .DS_Store
 Thumbs.db
 
-# VS Code (opcional - descomente se não quiser versionar configs pessoais)
+# VS Code (opcional para projetos que usam o Visual Studio Code)
 # .vscode/
