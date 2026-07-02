@@ -1,0 +1,13 @@
+# Binários compilados
+bin/
+*.out
+*.exe
+*.o
+*.obj
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# VS Code (opcional - descomente se não quiser versionar configs pessoais)
+# .vscode/
