@@ -8,7 +8,7 @@ Liberacao dupla de memoria
 funçao cria um espaco de memoria e libera duas vezes 
 e chamada no bloco principal
 
-Lembrando que isso pode causar comportamento indefinido 
+Lembrando que isso pode causar comportamento indefinido !
 */
 
 void double_free() {
@@ -43,6 +43,6 @@ int main() {
 
     double_free(); // Call again to demonstrate double free
     // Segunda função chamada para demonstrar o double free
-    
+
     return 0;
 }
