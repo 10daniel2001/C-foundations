@@ -40,9 +40,10 @@ void dangling_pointer() {
         // Ponteiro foi definido como NULL, evitando o dangling pointer
     }
 }
-
+/*********************************************************************************************** */
 int main() {
     dangling_pointer();
+    
     return 0;
 
 
