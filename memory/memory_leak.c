@@ -7,6 +7,7 @@
   LeakVar deixa de existir porque era uma variável local da stack.
   A memória continua ocupada no heap, mas não existe mais nenhum ponteiro para ela
   
+  conteudo didatico 
   */
 
 void memory_leak_example() {
