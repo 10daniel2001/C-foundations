@@ -6,6 +6,9 @@
   Conceito de lista ligada em C, para fins didadticos ultilizando ponteiros e estrutura
   
   concept the linked list in C, using pointers and structure
+
+  Ultiliazmos o conceitos de elos ligados, onde cada elemento da lista aponta para o proximo elemento da lista, e o ultimo elemento aponta para NULL, indicando o fim da lista.
+  Como se fosse um vetor dinamico, mas com a diferenca de que cada elemento da lista pode ter um tamanho diferente, e o tamanho da lista pode crescer ou diminuir dinamicamente.
   */
 
 // Define the structure for a node in the linked list
@@ -34,4 +37,26 @@ void printList(struct Node* node) {
         node = node->next;
     }
     printf("NULL\n");
+}
+
+int main() {
+    struct Node* head = NULL; // Initialize the head of the linked list to NULL
+                              // Inicializando o ponteiro do primeiro no da lista ligada para NULL
+
+    // Insert elements into the linked list
+    insert(&head, 1);
+    insert(&head, 2);
+    insert(&head, 3);
+    insert(&head, 4);
+    insert(&head, 5);
+
+
+    // Print the linked list
+    printList(head);
+
+
+    free(head); // Free the allocated memory for the linked list
+    // Sempre liberando para que nao haja vazamento de memoria, liberando a memoria alocada para a lista ligada
+
+    return 0;
 }
