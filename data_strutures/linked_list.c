@@ -17,6 +17,8 @@ struct Node {
     struct Node* next;
 };
 
+// Function to insert a new node at the beginning of the linked list
+// Função para inserir um novo nó no início da lista ligada 
 void insert(struct Node** head_ref, int new_data) {
     // Allocate memory for a new node
     // Create a new node and assign data to it
