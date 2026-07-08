@@ -39,6 +39,15 @@ void printList(struct Node* node) {
     printf("NULL\n");
 }
 
+void freeList(struct Node* node) {
+    struct Node* temp;
+    while (node != NULL) {
+        temp = node;
+        node = node->next;
+        free(temp);
+    }
+}
+
 int main() {
     struct Node* head = NULL; // Initialize the head of the linked list to NULL
                               // Inicializando o ponteiro do primeiro no da lista ligada para NULL
@@ -55,7 +64,7 @@ int main() {
     printList(head);
 
 
-    free(head); // Free the allocated memory for the linked list
+    freeList(head); // Free the allocated memory for the linked list
     // Sempre liberando para que nao haja vazamento de memoria, liberando a memoria alocada para a lista ligada
 
     return 0;
