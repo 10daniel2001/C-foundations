@@ -39,6 +39,9 @@ void printList(struct Node* node) {
     printf("NULL\n");
 }
 
+
+// Function to free the memory allocated for the linked list
+// Função para liberar a memória alocada para a lista ligada
 void freeList(struct Node* node) {
     struct Node* temp;
     while (node != NULL) {
