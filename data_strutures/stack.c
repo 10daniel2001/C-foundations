@@ -86,6 +86,12 @@ int stack_top(struct Stack *stack, struct Peaple *pessoa) {
 
 void stack_init(struct Stack *stack, int capacity) {
     stack->pessoas = (struct Peaple *)malloc(capacity * sizeof(struct Peaple));
+    if (stack->pessoas == NULL)
+    {
+        fprintf(stderr, "Erro ao alocar memória para a pilha!\n");
+        exit(1);
+    }
+    
     stack->top = -1;
     stack->capacity = capacity;
 }
