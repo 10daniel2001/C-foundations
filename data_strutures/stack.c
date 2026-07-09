@@ -28,3 +28,11 @@ int stack_vazia(struct Stack *stack) {
 int stack_cheia(struct Stack *stack) {
     return stack->top == stack->capacity - 1;
 }
+
+void stack_push(struct Stack *stack, struct Peaple pessoa) {
+    if (stack_cheia(stack)) {
+        printf("Stack cheia! Não é possível adicionar mais pessoas.\n");
+        return;
+    }
+    stack->pessoas[++stack->top] = pessoa;
+}
