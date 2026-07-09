@@ -36,3 +36,11 @@ void stack_push(struct Stack *stack, struct Peaple pessoa) {
     }
     stack->pessoas[++stack->top] = pessoa;
 }
+
+void stack_pop(struct Stack *stack) {
+    if (stack_vazia(stack)) {
+        printf("Stack vazia! Não é possível remover pessoas.\n");
+        return;
+    }
+    stack->top--;
+}
