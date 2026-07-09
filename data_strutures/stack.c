@@ -8,6 +8,10 @@
    ultimo a entrar, primeiro a sair
     
    Ultiziando ponteiro para o topo da pilha
+
+   Last In, First Out (LIFO) concept
+   last in, first out   
+
    */
 
 struct Peaple {
