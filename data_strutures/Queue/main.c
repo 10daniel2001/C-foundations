@@ -12,8 +12,16 @@ int main(void){
     Pessoa p2 = {"Daniel", 22};
     Pessoa p3 = {"Engenheiro", 28};
 
-    
+    queue(&f, &p1);
+    queue(&f, &p2);
+    queue(&f, &p3);
+
+
+    printss(&f);
 
 
 
+
+
+return 0;
 }

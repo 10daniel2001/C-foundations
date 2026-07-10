@@ -20,7 +20,7 @@ void queue(Fila *f, Pessoa *p){
     if (fila_cheia(f))
     {
         printf("Fila esta cheia, nao e possivel inserir!\n");
-        return 1;
+        exit(1);
     }
 
     f->intens[f->fim] = *p;
