@@ -23,12 +23,12 @@ typedef struct
   int total;
 }Fila; //queue
 
-void inicializar_init(Fila *f){};
-int fila_cheia(Fila *f){};
-int fila_vazia(Fila *f){};
-void queue(Fila *f, Pessoa *p){};
+void inicializar_init(Fila *f);
+int fila_cheia(Fila *f);
+int fila_vazia(Fila *f);
+void queue(Fila *f, Pessoa *p);
 
-void printss(Fila *f){};
+void printss(Fila *f);
 
 
 #endif
