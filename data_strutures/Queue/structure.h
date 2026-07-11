@@ -38,8 +38,10 @@ void inicializar_init(Fila *f);
 int fila_cheia(Fila *f);
 int fila_vazia(Fila *f);
 void queue(Fila *f, Pessoa *p);
-
+void dequeue(Fila *f, Pessoa *p);
+void peek(Fila *f, Pessoa *p);
 void printss(Fila *f);
+void clear(Fila *f);
 
 //End of the header file
 //Fim do arquivo de cabeçalho
