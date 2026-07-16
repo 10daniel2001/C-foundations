@@ -47,6 +47,8 @@ int main(void){
     printss(&f);
 
     peek(&f, &p);
+
+    printf("Elemento na frente da fila: Nome >> %s -- Idade >> %d\n", p.nome, p.idade);
     //Peeking at the front element of the queue by calling the peek function
     //Visualizando o elemento da frente da fila chamando a função peek
 
