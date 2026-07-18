@@ -17,6 +17,13 @@ struct Node {
 
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+      
+    if (newNode == NULL)
+    {
+        printf("Erro ao alocar espaço\n");
+        exit(1);
+    }
+    
     //Craiando um novo nó e alocando memória para ele
     // Inicializando os valores do nó
     // Definindo o valor do nó, e os ponteiros para os filhos como NULL
@@ -25,4 +32,10 @@ struct Node* createNode(int data) {
     newNode->left = NULL;
     newNode->right = NULL;
     return newNode;
+}
+
+void em_ordem(struct Node* n){
+    printf("Dataa .. %d\n", n->data);
+    em_ordem(n->left);
+    em_ordem(n->right);
 }
