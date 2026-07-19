@@ -35,4 +35,37 @@ void insert(Node** root, char data) {
     //Se a raiz for nula, cria um novo nó com o dado fornecido. Caso contrário,
     // compara o dado com o valor do nó atual e decide se deve inserir à esquerda
     // ou à direita da árvore.
+
+    //this function inserts a new node into the binary tree.
+    // If the root is null, it creates a new node with the provided data. 
+    //Otherwise, it compares the data with the value of the current node and
+    // decides whether to insert it to the left or right of the tree.
+}
+
+void inorderTraversal(Node* root) {
+    if (root != NULL) {
+        inorderTraversal(root->left);
+        printf("%c ", root->data);
+        inorderTraversal(root->right);
+    }
+    // Esta função realiza uma travessia em ordem da árvore binária.
+    // Ela visita o nó esquerdo, imprime o valor do nó atual e, em seguida,
+    // visita o nó direito.
+
+    // This function performs an in-order traversal of the binary tree.
+    // It visits the left node, prints the value of the current node, and then
+    // visits the right node.
+}
+
+void freeTree(Node* root) {
+    if (root != NULL) {
+        freeTree(root->left);
+        freeTree(root->right);
+        free(root);
+    }
+    // Esta função libera a memória alocada para a árvore binária.
+    // Ela percorre recursivamente a árvore e libera cada nó.
+
+    // This function frees the memory allocated for the binary tree.
+    // It recursively traverses the tree and frees each node.
 }
