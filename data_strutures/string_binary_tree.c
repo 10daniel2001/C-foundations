@@ -48,4 +48,38 @@ void inorderTraversal(Node *root) {
         printf("%s\n", root->data);
         inorderTraversal(root->right);
     }
+    // Function to perform an inorder traversal of the binary tree,
+    // função para realizar uma travessia em ordem da árvore binária
+}
+
+void freeTree(Node *root) {
+    if (root != NULL) {
+        freeTree(root->left);
+        freeTree(root->right);
+        free(root->data); // Free the duplicated string
+        free(root);
+    }
+    // Function to free the memory allocated for the binary tree,
+    // função para liberar a memória alocada para a árvore binária
+}
+
+int main() {
+    Node *root = NULL;
+
+    // Insert strings into the binary tree
+    // Inserir strings na árvore binária
+    // A Maior string vai para a direita e a menor para a esquerda
+    // The largest string goes to the right and the smallest to the left
+    insert(&root, "banana");
+    insert(&root, "apple");
+    insert(&root, "cherry");
+    insert(&root, "date");
+    insert(&root, "fig");
+    insert(&root, "grape");
+
+    printf("Inorder Traversal of the String Binary Tree:\n");
+    inorderTraversal(root);
+
+    freeTree(root);
+    return 0;
 }
