@@ -5,6 +5,19 @@
 /*String Binary Tree
   Arvore binaria de strings
   
+implementation of a binary tree that stores strings. 
+Each node contains a string and pointers to its left and right 
+children. The tree is organized such that for any given node,
+all strings in the left subtree are lexicographically less than the string in the node,
+and all strings in the right subtree are lexicographically greater than or equal to the string
+in the node.
+
+implementação de uma árvore binária que armazena strings.
+Cada nó contém uma string e ponteiros para seus filhos esquerdo e direito.
+A árvore é organizada de tal forma que, para qualquer nó dado,
+todas as strings na subárvore esquerda são lexicograficamente menores que a string no nó,
+e todas as strings na subárvore direita são lexicograficamente maiores ou iguais à string no nó.    
+
 
 */
 
