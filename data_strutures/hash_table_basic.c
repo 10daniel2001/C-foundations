@@ -45,6 +45,7 @@ void insert(const char* chave, int valor){
     struct Node* atual = table[indice];
     while (atual != NULL)
     {
+         // Verifica se a chave já existe nesse bucket -> atualiza o valor
         if (strcmp(atual->chave, chave) == 0)
         {
             atual->valor = valor;
@@ -53,5 +54,27 @@ void insert(const char* chave, int valor){
         atual = atual->proximo;
         
     }
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    if (new_node == NULL)
+    {
+        fprintf(stderr, "Erro falha ao aaloca memoria\n");
+        return;
+    }
+
+    new_node->chave = (char*)malloc(strlen(chave)+1);
+    if (new_node->chave == NULL)
+    {
+        free(new_node);
+        fprintf(stderr, "Erro ao alocar\n");
+        return;
+    }
+    strcpy(new_node->chave, chave);
+    new_node->valor = valor;
+    new_node->proximo = table[indice];
+    // insere no início (mais simples e rápido)
+    table[indice] = new_node;
     
 }
+
+
+
