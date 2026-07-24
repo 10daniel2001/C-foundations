@@ -76,5 +76,19 @@ void insert(const char* chave, int valor){
     
 }
 
+// Busca o valor associado a uma chave. Retorna 1 se achou (e preenche *valor), 0 se não achou
+int buscar(const char* chave, int* valor) {
+    unsigned int indice = funcao_hash(chave);
+    struct Node* atual = table[indice];
+ 
+    while (atual != NULL) {
+        if (strcmp(atual->chave, chave) == 0) {
+            *valor = atual->valor;
+            return 1;
+        }
+        atual = atual->proximo;
+    }
+    return 0; // não encontrado
+}
 
 
