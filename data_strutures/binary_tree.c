@@ -35,6 +35,12 @@ struct Node* createNode(int data) {
 }
 
 void em_ordem(struct Node* n){
+    if (n == NULL)
+    {
+        printf("Erro, raiz vazia\n");
+        return;
+    }
+    
     printf("Data .. %d\n", n->data);
     em_ordem(n->left);
     em_ordem(n->right);
@@ -55,6 +61,7 @@ int main() {
     root->right = createNode(3);
     root->left->left = createNode(4);
     root->left->right = createNode(5);
+    
 
     em_ordem(root);
 
