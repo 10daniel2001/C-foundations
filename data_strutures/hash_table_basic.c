@@ -91,4 +91,31 @@ int buscar(const char* chave, int* valor) {
     return 0; // não encontrado
 }
 
+//REmover
+void remover(const char* chave){
+    unsigned int indice = func_hash(chave);
+    struct Node* atual = table[indice];
+    struct Node* anterior = NULL;
+
+    while (atual != NULL)
+    {
+        if (strcmp(atual->chave, chave) == 0)
+        {
+            if (anterior == NULL)
+            {
+                table[indice] = atual->proximo;
+            }else{
+                anterior->proximo = atual->proximo;
+            }
+            
+            free(atual->chave);
+            free(atual);
+            return;
+        }
+        anterior = atual;
+        atual = atual->proximo;
+        
+    }
+    
+}
 
