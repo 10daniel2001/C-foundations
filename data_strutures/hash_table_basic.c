@@ -78,7 +78,7 @@ void insert(const char* chave, int valor){
 
 // Busca o valor associado a uma chave. Retorna 1 se achou (e preenche *valor), 0 se não achou
 int buscar(const char* chave, int* valor) {
-    unsigned int indice = funcao_hash(chave);
+    unsigned int indice = func_hash(chave);
     struct Node* atual = table[indice];
  
     while (atual != NULL) {
@@ -119,3 +119,49 @@ void remover(const char* chave){
     
 }
 
+// Libera toda a memória alocada pela tabela
+void liberar_tabela() {
+    for (int i = 0; i < Size_table; i++) {
+        struct Node* atual = table[i];
+        while (atual != NULL) {
+            struct Node* proximo = atual->proximo;
+            free(atual->chave);
+            free(atual);
+            atual = proximo;
+        }
+        table[i] = NULL;
+    }
+}
+
+int main(){
+   
+    init_table();
+
+
+    insert("joao", 25);
+    insert("joa", 25);
+    insert("maria", 30);
+    insert("ana", 22);
+    insert("joao", 26); // atualiza o valor de "joao"
+
+
+    int valor;
+    if (buscar("maria", &valor)) {
+        printf("maria -> %d\n", valor);
+    }
+    if (buscar("joao", &valor)) {
+        printf("joao -> %d\n", valor);
+    }
+    if (!buscar("pedro", &valor)) {
+        printf("pedro nao encontrado\n");
+    }
+ 
+    remover("ana");
+    if (!buscar("ana", &valor)) {
+        printf("ana removida com sucesso\n");
+    }
+ 
+    liberar_tabela();
+    return 0;
+}
+ 
