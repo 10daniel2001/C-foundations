@@ -136,8 +136,10 @@ void liberar_tabela() {
 int main(){
    
     init_table();
+    // Funçao para iniciar a tabela antes de inserir
 
 
+    // Inserindo strings e numeros inteiros 
     insert("joao", 25);
     insert("joa", 25);
     insert("maria", 30);
@@ -161,6 +163,7 @@ int main(){
         printf("ana removida com sucesso\n");
     }
  
+    // Para liberar tudo que foi alocado, chamada de funçao
     liberar_tabela();
     return 0;
 }
