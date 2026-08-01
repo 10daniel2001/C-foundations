@@ -36,7 +36,9 @@ int main(){
 
 
   free(new_character);
+  //No memory leak
   free(new_memory);
+  //Yes free memory
   
     return 0;
 }
