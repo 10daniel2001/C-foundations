@@ -11,11 +11,13 @@ void function_recursive(int value)
     {
         printf("Fim\n");
         return;
+        // Para fim da recursao
     }
 
     printf("%d\n", value);
 
     function_recursive(value - 5);
+    // chamada da funçao para si mesma
 
     printf("Voltando %d\n", value);
 }
