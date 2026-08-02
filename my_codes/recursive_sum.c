@@ -11,7 +11,7 @@ void function_recursive(int value)
     {
         printf("Fim\n");
         return;
-        // Para fim da recursao
+        // Para o fim da recursao
     }
 
     printf("%d\n", value);
@@ -26,7 +26,7 @@ void function_recursive(int value)
 int main(){
     
     function_recursive(25);
-
+    //chamado de funçao, e atribuindo um valor 
 
     return 0;
 }
