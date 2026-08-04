@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <time.h>
 
+/*
+
+*/
 int main() {
     time_t agora = time(NULL);
     struct tm *local = localtime(&agora);
