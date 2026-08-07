@@ -4,9 +4,14 @@
 
 /*Tabela hash simples (string -> int) com tratamento de colisão
   por encadeamento (chaining)
+
+  table hash simple (string -> int) with collision handling
+
 */
 
 #define Size_table 10 // tamanho da tabela
+// size of the table
+
 
 struct Node
 {
@@ -34,8 +39,12 @@ unsigned int func_hash(const char* chave){
     for (int i = 0; chave[i] != '\0'; i++)
     {
         soma += chave[i];
+        // Sum the ASCII values of the characters
+        // Soma os valores ASCII dos caracteres
     }
     return soma % Size_table;
+    // Apply modulo to fit into the table size
+    // Aplica módulo para caber no tamanho da tabela
 }
 
 // Insere (ou atualiza, se a chave já existir) um par chave/valor
