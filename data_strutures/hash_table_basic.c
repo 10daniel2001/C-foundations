@@ -39,6 +39,7 @@ unsigned int func_hash(const char* chave){
     for (int i = 0; chave[i] != '\0'; i++)
     {
         soma += chave[i];
+        
         // Sum the ASCII values of the characters
         // Soma os valores ASCII dos caracteres
     }
