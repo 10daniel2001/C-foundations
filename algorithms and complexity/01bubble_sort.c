@@ -28,15 +28,29 @@ void bubble_sort(int vetor[], int n){
                //vetor[1] > vetor[2] suponha que vetor[1] e 10 e vetor[j+1] e 33
                //Entao if realiza a troca colocando o maior para o final 
              {
-                temp = vetor[j];
-                vetor[j] = vetor[j+1];
-                vetor[j+1] = temp;
-                trocou = 1;
+                temp = vetor[j]; // Temp recebe o vetor[j]
+                vetor[j] = vetor[j+1]; //vetor[j] recebe o vetor[j+1]
+                vetor[j+1] = temp; // vetor[j+1] recebe temp
+                trocou = 1; // Troca sinalizada com 1, recebe 1, troca feita
              }
              
         }
+        if (!trocou)
+        {
+            break;
+            //Aqui invert trocou, se nenhum troca foi feita ja esta ordenando
+        }
+        
         
     }
     
 
+}
+
+int main(){
+    int vetor[] = {22,55,45,78,98,75,48};
+    int n = sizeof(vetor)/sizeof(sizeof(vetor[0]));
+
+    printf("Tamanho da entrada - %d\n", n);
+    
 }
