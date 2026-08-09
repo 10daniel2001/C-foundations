@@ -14,10 +14,12 @@ Para realizar a análise assintótica, consideramos que, para um algoritmo com t
 O(1), O(n), O(n²) 
 A principal utilidade da notação Big O é permitir a comparação objetiva entre algoritmos, independentemente da implementação. 
 //
+
 Constante – O(1)
 Indica que o tempo de execução é sempre o mesmo, sem importar o tamanho da entrada.
 Exemplo: acesso direto a um elemento em uma matriz.
 //
+
 Logarítmica – O(log n)
 Aparece quando a entrada é reduzida pela metade a cada etapa. Ela é muito comum em estruturas de dados balanceadas, como árvores binárias de busca.
 Exemplo: determinar se um número está presente em um conjunto de dados ordenados usando divisão binária.
@@ -26,22 +28,27 @@ Linear – O(n)
 Significa que a complexidade cresce com o tamanho da entrada. Cada elemento é examinado uma vez.
 Exemplo: verificar se há duplicatas em uma lista não ordenada, comparando cada elemento com os anteriores.
 //
+
 Linearítmica – O(n log n)
 É comum em algoritmos que dividem a entrada e fazem trabalho proporcional ao tamanho total em cada nível.
 Exemplo: algoritmos de agrupamento hierárquico em aprendizado de máquina.
 //
+
 Quadrática – O(n²)
 Aparece quando cada elemento é comparado com todos os outros, resultando em número de operações proporcional ao quadrado do tamanho da entrada.
 Exemplo: calcular a similaridade entre todos os pares de documentos em um corpus para criar um mapa semântico.
 //
+
 Exponencial – O(2ⁿ)
 Correspondem a algoritmos que exploram todas as combinações possíveis, em particular, em problemas de decisão complexos.
 Exemplo: resolver um jogo de tabuleiro considerando todos os possíveis caminhos de movimento.
 //
+
 Fatorial – O(n!)
 Aparece em problemas de permutação, como determinar todas as possíveis ordens de uma sequência.
 Exemplo: analisar todas as ordens possíveis de visitas em um itinerário turístico para encontrar a mais eficiente.
 //
+
 # COTA SUPERIOR
 "Cota superior" (upper bound) é um limite que garante que o tempo de execução do algoritmo nunca vai ultrapassar uma certa taxa de crescimento, para entradas suficientemente grandes.
 
