@@ -76,3 +76,10 @@ int main(){
     
     return 0;
 }
+
+/*A complexidade 
+Tempo: O(n²) em todos os casos (melhor, médio e pior)  o algoritmo sempre varre o subarray
+inteiro procurando o mínimo, independente da entrada já estar ordenada ou não
+Espaço: O(1) — ordenação in-place, sem uso de memória extra além de variáveis auxiliares.
+
+*/
