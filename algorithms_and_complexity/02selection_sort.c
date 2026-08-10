@@ -63,14 +63,14 @@ int main(){
     printf("++ Vetor desordenado ++\n");
     for (int i = 0; i < n; i++)
     {
-        printf("V--[%d]\n", vetor[i]);
+        printf("V--[%d] \n", vetor[i]);
     }
 
     printf("++ Vetor ordenado ++\n");
     selection_sort(vetor, n);
     for (int k = 0; k< n; k++)
     {
-        printf("V--[%d]\n", vetor[k]);
+        printf("V--[%d] \n", vetor[k]);
     }
     
     
@@ -82,4 +82,5 @@ Tempo: O(n²) em todos os casos (melhor, médio e pior)  o algoritmo sempre varr
 inteiro procurando o mínimo, independente da entrada já estar ordenada ou não
 Espaço: O(1) — ordenação in-place, sem uso de memória extra além de variáveis auxiliares.
 
+Nas comparacoes ele e O(n²), e nas trocas ele e O(n)
 */
