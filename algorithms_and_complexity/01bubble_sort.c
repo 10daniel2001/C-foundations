@@ -23,7 +23,7 @@ void bubble_sort(int vetor[], int n){
 
         for ( j = 0; j < n - i -1; j++)
         {
-            // Laço for interno verifica o vetor e comparar os elementos adjacentes, e eefetua a troca 
+            // Laço for interno verifica o vetor e comparar os elementos adjacentes, e efetua a troca 
              if (vetor[j] > vetor[j+1])
                //vetor[1] > vetor[2] suponha que vetor[1] e 10 e vetor[j+1] e 33
                //Entao if realiza a troca colocando o maior para o final 
@@ -72,3 +72,20 @@ int main(){
 
     return 0;
 }
+
+/* -- Analise assintótica -- 
+Bubble sorte e in-place, ou seja nao necessita de memoria extra para executar a ordenaçao
+sendo assim sua complexidade espacial e O(1) constante 
+
+Nos cenario de medio e pior caso o bubble sorte  e quadratico O(n²), ao ultilizar doi for aninhando
+um para comparar e ou para efetuar a troca percebemos que ele duplica o valor de comparaçao, podendo
+ser inefeciente em grandes entradas
+
+portanto  
+No melhor caso, quando o vetor já está ordenado, a versão otimizada do algoritmo executa apenas 
+uma passagem e não realiza trocas. Isso diminui basante o número de operações, aproximando a 
+complexidade de O(n). Esse cenário mostra como pequenas otimizações podem ter um impacto real no 
+desempenho
+
+
+*/
