@@ -54,3 +54,25 @@ void selection_sort(int vetor[], int n){
     }
     
 }
+
+int main(){
+
+    int vetor[] = {45,66,98,78,94,01};
+    int n = sizeof(vetor)/sizeof(vetor[0]);
+
+    printf("++ Vetor desordenado ++\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("V--[%d]\n", vetor[i]);
+    }
+
+    printf("++ Vetor ordenado ++\n");
+    selection_sort(vetor, n);
+    for (int k = 0; k< n; k++)
+    {
+        printf("V--[%d]\n", vetor[k]);
+    }
+    
+    
+    return 0;
+}
