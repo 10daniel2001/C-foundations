@@ -74,12 +74,12 @@ int main(){
 }
 
 /* -- Analise assintótica -- 
-Bubble sorte e in-place, ou seja nao necessita de memoria extra para executar a ordenaçao
+Bubble sort e in-place, ou seja nao necessita de memoria extra para executar a ordenaçao
 sendo assim sua complexidade espacial e O(1) constante 
 
-Nos cenario de medio e pior caso o bubble sorte  e quadratico O(n²), ao ultilizar doi for aninhando
-um para comparar e ou para efetuar a troca percebemos que ele duplica o valor de comparaçao, podendo
-ser inefeciente em grandes entradas
+Nos cenario de medio e pior caso o bubble sort  e quadratico O(n²), ao utilizar dois for aninhados — um controlando o 
+número de passagens e outro percorrendo o vetor a cada passagem 
+— o número total de comparações cresce proporcionalmente a n², podendo ser ineficiente em grandes entradas
 
 portanto  
 No melhor caso, quando o vetor já está ordenado, a versão otimizada do algoritmo executa apenas 
