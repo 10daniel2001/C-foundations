@@ -3,6 +3,8 @@
 
 /*Recursuve insertion sort, um algoritmo de ordenaçao 
 
+   N-1 e a condiçao de parada para a funçao recursviva, sera empilhada no frame X vezes, e desinpilhada X vezes
+   variavel key recebe 
 */
 
 
@@ -12,9 +14,11 @@ void insertion_sort(int vetor[], int n){
 
     insertion_sort(vetor, n-1);
 
-    int key = vetor[n-1];
-    int jj = n-2;
+    int key = vetor[n-1]; // total de indices e 5 entao 5-1 = 4, key [3]
+    int jj = n-2;   // jj = 5-2 = 3
 
+    // Exemplos [30,50,40,20,10] Elementos
+    // Indice   [ 0, 1, 2, 3, 4 ]  
     while (jj >= 0 && vetor[jj] > key )
     {
         vetor[jj+1] = vetor[jj];
@@ -28,14 +32,24 @@ void insertion_sort(int vetor[], int n){
 void imprimir(int vet[], int n){
     for (int i = 0; i < n; i++)
     {
-        printf("vetor __ %d\n", vet[i]);
+        printf("vetor __ %d \n", vet[i]);
     }
     printf("\n");
     
 }
 
 int main(){
-    int vetor[] = {20,54,89,77,88,03};
+    int vetor[] = {9,5,7,6,1,4,3,2,8};
     int n = sizeof(vetor)/sizeof(vetor[0]);
-    
+
+    printf("Vetor original: \n");
+    imprimir(vetor, n);
+
+    insertion_sort(vetor, n);
+
+    printf("Vetor ordenado: \n");
+    imprimir(vetor, n);
+
+    return 0;
+
 }
