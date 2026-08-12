@@ -25,3 +25,17 @@ void insertion_sort(int vetor[], int n){
     
 }
 
+void imprimir(int vet[], int n){
+    for (int i = 0; i < n; i++)
+    {
+        printf("vetor __ %d\n", vet[i]);
+    }
+    printf("\n");
+    
+}
+
+int main(){
+    int vetor[] = {20,54,89,77,88,03};
+    int n = sizeof(vetor)/sizeof(vetor[0]);
+    
+}
