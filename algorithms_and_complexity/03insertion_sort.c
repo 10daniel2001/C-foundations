@@ -14,14 +14,16 @@ void insertion_sort(int vetor[], int n){
 
     insertion_sort(vetor, n-1);
 
-    int key = vetor[n-1]; // total de indices e 5 entao 5-1 = 4, key [3]
-    int jj = n-2;   // jj = 5-2 = 3
+    int key = vetor[n-1]; // total de indices e 5 entao 4-1 = 3, key [3]
+    int jj = n-2;   // jj = 4-2 = 2
 
     // Exemplos [30,50,40,20,10] Elementos
     // Indice   [ 0, 1, 2, 3, 4 ]  
     while (jj >= 0 && vetor[jj] > key )
-    {
+    {   // jj >= 0 i is true end vetor[40] > key = 20 , elementos 
+        // true 
         vetor[jj+1] = vetor[jj];
+       //vetor[4] = veteor[3] 
         jj--;
     }
    
