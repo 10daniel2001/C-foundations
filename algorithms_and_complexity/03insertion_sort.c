@@ -56,3 +56,8 @@ int main(){
     return 0;
 
 }
+/*Insertion sort, e de complexidade temporal Quadratica, isto no pior caso, pois contem percorrimentos mesmo se a sublista tiver organizada
+  No melhor caso ele pode chegar a ser linear  O(n), claro em caso de lista ordenadas
+  
+  A complexidade de espaço, Insertio e linear poisusar um espaço na stack pois a sua recursao, empilha e desipilha
+  Insertion se da como estavel, se astabilidade for um requisito !*/
