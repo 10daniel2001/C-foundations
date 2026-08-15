@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-/*Recursuve insertion sort, um algoritmo de ordenaçao 
+/*Recursive insertion sort um algoritmo de ordenaçao 
 
    N-1 e a condiçao de parada para a funçao recursviva, sera empilhada no frame X vezes, e desinpilhada X vezes
    variavel key recebe 
@@ -59,5 +59,7 @@ int main(){
 /*Insertion sort, e de complexidade temporal Quadratica, isto no pior caso, pois contem percorrimentos mesmo se a sublista tiver organizada
   No melhor caso ele pode chegar a ser linear  O(n), claro em caso de lista ordenadas
   
-  A complexidade de espaço, Insertio e linear poisusar um espaço na stack pois a sua recursao, empilha e desipilha
-  Insertion se da como estavel, se astabilidade for um requisito !*/
+  A complexidade de espaço Insertion e linear pois usa um espaço na stack, a sua recursao empilha e desipilha
+  Insertion se da como estavel, se astabilidade for um requisito !
+  
+  */
