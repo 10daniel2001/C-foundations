@@ -11,3 +11,10 @@ Thumbs.db
 
 # VS Code (opcional para projetos que usam o Visual Studio Code)
 # .vscode/
+data_structures/binary_tree
+data_structures/bin_search
+data_structures/hash_table_basic
+data_structures/linked_list
+data_structures/Matrix
+data_structures/stack
+data_structures/string_binary_tree
