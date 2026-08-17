@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Em ingles 
+// Example of a structure where there is a name, model, and identification of various cars
+// struct representing a car with name, model, and id
+// function to perform swaps for selection sort and bubble sort
+// Function bubble_sort implements the bubble sort algorithm to sort an array of Cars based on their id
+// Function selection_sort implements the selection sort algorithm to sort an array of Cars based on their id
+// function insertion_sort implements the insertion sort algorithm to sort an array of Cars based on their id
+
 // Exemplo representativo de uma estrutura onde exite nome modelo e identificaçao de varios carros
 // E vou usar ordenaçao para deixa los organizado de acordo com id 
 struct Cars{
