@@ -81,18 +81,55 @@ void selection_sort(struct Cars list[], int n){
 // If para condição de parada, se n for menor ou igual a 1, retorna
 void insertion_sort(struct Cars list[], int n){
     if (n <= 1)
+    // condition of stopping the recursion,
+    // if n is less than or equal to 1, return
     return;
    
     insertion_sort(list, n-1);
+    // Recursive call to insertion_sort with n-1, reducing the size of the list to be sorted
 
-    int key = list[n-1].id; // total de indices e 4 entao 4-1 = 3, key [3]
-    int jj = n-2;   // jj = 4-2 = 2
+    int key = list[n-1].id; // key receives the id of the last element in the current sublist
+    // key e inicializado com o id do ultimo elemento da sublista atual
+    int jj = n-2; // jj is initialized to the index of the second last element in the current sublist
+    // jj e inicializado com o indice do penultimo elemento da sublista atual
 
     while (jj >= 0 && list[jj].id > key)
+    // While loop to find the correct position for key in the sorted sublist
+    // O while loop procura a posiçao correta para key na sublista ordenada
+    // jj >= 0 checks if we have not reached the beginning of the list
+    // list[jj].id > key checks if the current element is greater than key
+    // Se jj >= 0 verifica se nao chegamos ao inicio da lista
+    // list[jj].id > key verifica se o elemento atual e maior que key
+
     {
         list[jj+1] = list[jj];
         jj--;
     }
     list[jj+1].id = key;
 
+}
+
+int main(){
+    struct Cars list[] = {
+        {"CarA", "ModelX", 5},
+        {"CarB", "ModelY", 3},
+        {"CarC", "ModelZ", 8},
+        {"CarD", "ModelW", 1},
+        {"CarE", "ModelV", 4}
+    };
+    int n = sizeof(list)/sizeof(list[0]);
+
+    printf("Original list of cars:\n");
+    for (int i = 0; i < n; i++) {
+        printf("Name: %s, Model: %s, ID: %d\n", list[i].name, list[i].model, list[i].id);
+    }
+
+    insertion_sort(list, n);
+
+    printf("\nSorted list of cars by ID:\n");
+    for (int i = 0; i < n; i++) {
+        printf("Name: %s, Model: %s, ID: %d\n", list[i].name, list[i].model, list[i].id);
+    }
+
+    return 0;
 }
