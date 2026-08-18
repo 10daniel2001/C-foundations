@@ -76,3 +76,12 @@ void selection_sort(struct Cars list[], int n){
     }
     
 }
+
+
+void insertion_sort(struct Cars list[], int n){
+    if (n <= 1)
+    return;
+
+    int key = list[n-1].id; // total de indices e 4 entao 4-1 = 3, key [3]
+    int jj = n-2;   // jj = 4-2 = 2
+}
