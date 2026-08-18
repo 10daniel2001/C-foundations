@@ -77,11 +77,22 @@ void selection_sort(struct Cars list[], int n){
     
 }
 
-
+// Algoritmo insertion sort
+// If para condição de parada, se n for menor ou igual a 1, retorna
 void insertion_sort(struct Cars list[], int n){
     if (n <= 1)
     return;
+   
+    insertion_sort(list, n-1);
 
     int key = list[n-1].id; // total de indices e 4 entao 4-1 = 3, key [3]
     int jj = n-2;   // jj = 4-2 = 2
+
+    while (jj >= 0 && list[jj].id > key)
+    {
+        list[jj+1] = list[jj];
+        jj--;
+    }
+    list[jj+1].id = key;
+
 }
