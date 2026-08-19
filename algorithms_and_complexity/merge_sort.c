@@ -77,3 +77,15 @@ int main(){
 
     return 0;
 }
+
+/*Notaçao Big O
+  O(n log n)
+  Merge sort é um algoritmo de ordenação eficiente que utiliza a técnica de divisão
+   e conquista. Ele divide o array em duas metades, ordena cada metade recursivamente e
+   em seguida, mescla as duas metades ordenadas. A complexidade de tempo do merge sort é O(n log n)
+   onde n é o número de elementos no array. Isso ocorre porque o array é dividido logaritmicamente (log n) 
+   e cada nível de divisão requer uma operação linear (n) para mesclar os elementos.
+
+   Ele e tem uma complexidade de espaço adicional de O(n) devido à necessidade de armazenar os 
+   elementos temporariamente durante a mesclagem.
+*/
