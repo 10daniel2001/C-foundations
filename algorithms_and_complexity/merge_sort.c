@@ -42,11 +42,38 @@ void merge_sort(int vetor[], int inicio, int fim){
      if (inicio < fim){
         int meio = inicio + (fim - inicio) / 2;
 		
-	merge_sort(vetor, inicio, fim);
+	merge_sort(vetor, inicio, meio);
 	merge_sort(vetor, meio + 1, fim);
   
-	merge(vetor, inicio, meio fim);  
+	merge(vetor, inicio, meio ,fim);  
      }// fim if
 }//fim da funçao
 
+int main(){
+    int v1[] = {5, 3, 1, 4, 2};
+    int n1 = sizeof(v1) / sizeof(v1[0]);
+    merge_sort(v1, 0, n1 - 1);
+    printf("Teste 1: ");
+    for (int i = 0; i < n1; i++) printf("%d ", v1[i]);
+    printf("\n");
 
+    int v2[] = {1, 2, 3, 4, 5}; 
+    int n2 = sizeof(v2) / sizeof(v2[0]);
+    merge_sort(v2, 0, n2 - 1);
+    printf("Teste 2: ");
+    for (int i = 0; i < n2; i++) printf("%d ", v2[i]);
+    printf("\n");
+
+    int v3[] = {4, 4, 2, 2, 1}; // com repetidos
+    int n3 = sizeof(v3) / sizeof(v3[0]);
+    merge_sort(v3, 0, n3 - 1);
+    printf("Teste 3: ");
+    for (int i = 0; i < n3; i++) printf("%d ", v3[i]);
+    printf("\n");
+
+    int v4[] = {7}; // 1 elemento
+    merge_sort(v4, 0, 0);
+    printf("Teste 4: %d\n", v4[0]);
+
+    return 0;
+}
