@@ -19,9 +19,12 @@ void merge_sort(int vetor[], int inicio, int meio, int fim){
            }else{
                 vetor[k] = vetdireito[j++];
     
-         }// fim do if  
- 
-    }//fim do if
+         }// fim do if 
 
   }//Fim do while
-}
+   	k++;
+	
+    	while(i < n1) vetor[k++] = vetesquerdo[i++];
+ 	while(j < n2) vetor[k++] = vetdireito[j++];
+
+}//fim da funçao
