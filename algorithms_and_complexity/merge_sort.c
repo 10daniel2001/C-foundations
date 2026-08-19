@@ -10,4 +10,18 @@ void merge_sort(int vetor[], int inicio, int meio, int fim){
         for(int i = 0; i < n1; i++) vetesquerdo[i] = vetor[inicio + 1];
         for(int j = 0; j < n2; j++) vetdireito[j] = vetor[meio+1+j]; 
 
+        int i = 0, j = 0, k = inicio;
+	while(i < n1 && j < n2){
+  
+           if (vetesquerdo[i] <= vetdireito[j]){
+	        vetor[k] = vetesquerdo[i++];
+              
+           }else{
+                vetor[k] = vetdireito[j++];
+    
+         }// fim do if  
+ 
+    }//fim do if
+
+  }//Fim do while
 }
