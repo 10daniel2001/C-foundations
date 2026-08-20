@@ -19,9 +19,18 @@ int partes(int vetor[], int baixo, int alto){
     		if(vetor[j] < pivo){
      			i++;
 			trocar(&vetor[i], &vetor[j]);
-	}//fim if
+			}//fim if
 
 	}//fim for
 	trocar(&vetor[i+1], &vetor[alto]);
-	returno (i+1);
+	return (i+1);
 }// Fim da funçao partes
+
+//Funçao de ordenaçao
+void quickSort(int vetor[], int baixo, int alto){
+	if(baixo < alto){
+		int pivo = partes(vetor, baixo, alto);
+		quickSort(vetor, baixo, pivo - 1);
+		quickSort(vetor, pivo + 1, alto);
+	}//fim if		
+}//fim da funçao quickSort	
