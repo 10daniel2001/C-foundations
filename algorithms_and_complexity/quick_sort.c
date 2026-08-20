@@ -3,6 +3,7 @@
 
 //Quick sort algoritmo de ordenaçao efetivo e recursivo
 
+//Funçao tradicional para uso em alguns algoritmos
 void trocar(int *a, int *b){
 	int temp = *a;
 	*a = *b;
@@ -11,8 +12,16 @@ void trocar(int *a, int *b){
 
 //Particionar o array
 int partes(int vetor[], int baixo, int alto){
-	int pivo = vetor[alto];
-        int i = (baixo - 1);
+	int pivo = vetor[alto]; // Pivo recebe o ulemetos como pivo
+        int i = (baixo - 1);  // Indice do menor elemento
 	
+	for (int j = baixo; j <= alto - 1;j++){
+    		if(vetor[j] < pivo){
+     			i++;
+			trocar(&vetor[i], &vetor[j]);
+	}//fim if
 
+	}//fim for
+	trocar(&vetor[i+1], &vetor[alto]);
+	returno (i+1);
 }// Fim da funçao partes
