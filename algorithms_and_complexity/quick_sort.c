@@ -39,10 +39,22 @@ int main(){
 	int vetor[] = {10, 7, 8, 9, 1, 5};
 
 	int n = sizeof(vetor)/sizeof(vetor[0]);
-	
+
 	quickSort(vetor, 0, n-1);
 	printf("Vetor ordenado: \n");
 	for(int i=0; i < n; i++)
 		printf("%d ", vetor[i]);
 	return 0;
 }//fim da funçao main
+
+/*Nota: O algoritmo de ordenação rápido (Quick Sort) é um algoritmo eficiente e amplamente utilizado para ordenar elementos em um array. Sua complexidade
+  de tempo média é O(n log n), mas pode chegar a O(n^2) em casos específicos. 
+ 
+  A escolh de um pivô adequado é crucial para o desempenho do algoritmo. Neste código, 
+  o último elemento do array é escolhido como pivô. A função 'partes' reorganiza os elementos em
+  torno do pivô, garantindo que todos os elementos menores que o pivô fiquem à esquerda e todos
+  os maiores fiquem à direita. A função 'quickSort' é chamada recursivamente para ordenar as 
+  sublistas resultantes.
+
+  Um pivo não ideal pode levar a um desempenho ruim, especialmente em listas já ordenadas ou quase ordenadas.
+  */
