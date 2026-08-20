@@ -12,8 +12,8 @@ void trocar(int *a, int *b){
 
 //Particionar o array
 int partes(int vetor[], int baixo, int alto){
-	int pivo = vetor[alto]; // Pivo recebe o ulemetos como pivo
-        int i = (baixo - 1);  // Indice do menor elemento
+	int pivo = vetor[alto]; //  recebe o ulemetos como pivo
+    int i = (baixo - 1);  // Indice do menor elemento
 	
 	for (int j = baixo; j <= alto - 1;j++){
     		if(vetor[j] < pivo){
@@ -57,4 +57,14 @@ int main(){
   sublistas resultantes.
 
   Um pivo não ideal pode levar a um desempenho ruim, especialmente em listas já ordenadas ou quase ordenadas.
+  O quick sort é um algoritmo O (nlogn) no caso médio, in-place e não estável 
+  */
+
+  /*
+    Note: The quick sort algorithm is a divide-and-conquer algorithm that works by selecting a
+	'pivot' element from the array and partitioning the other elements into two sub-arrays,
+	according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
+	This implementation uses the last element as the pivot, which can lead to poor performance on already sorted arrays. 
+
+	
   */
