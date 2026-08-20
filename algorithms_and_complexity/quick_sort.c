@@ -34,3 +34,15 @@ void quickSort(int vetor[], int baixo, int alto){
 		quickSort(vetor, pivo + 1, alto);
 	}//fim if		
 }//fim da funçao quickSort	
+
+int main(){
+	int vetor[] = {10, 7, 8, 9, 1, 5};
+
+	int n = sizeof(vetor)/sizeof(vetor[0]);
+	
+	quickSort(vetor, 0, n-1);
+	printf("Vetor ordenado: \n");
+	for(int i=0; i < n; i++)
+		printf("%d ", vetor[i]);
+	return 0;
+}//fim da funçao main
