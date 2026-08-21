@@ -18,5 +18,10 @@ void heap_fuc(int vetor[], int n, int i){
        	if(esqu < n && vetor[esqu] > vetor[meior]) maior = esqu;
 	//Verifica se o filho direito existe ou e maior que a raiz
 	if(dire < n && vetor[dire] > vetor[meior]) meior = dire;
-
+       
+ 	// Se o maior não for a raiz, troca e continua a "consertar" para baixo
+	if(maior != i){
+	    trocar(&vetor[i], &trocar[maior]);
+            heap_fuc(vetor, n, maior);	
+	}//fim do if
 }// fim da funçâo heap_fy
