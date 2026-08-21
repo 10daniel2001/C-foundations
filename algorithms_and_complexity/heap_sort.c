@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//Iniciando jeap sort um dosmelhores algoritmos em questâo de desenpenho e espaço
+//Iniciando heap sort um dos melhores algoritmos em questâo de desempenho e espaço !
 
 void trocar(int *a, int* b){
 	int temp = *a;
@@ -40,3 +40,26 @@ void heap_sort(int vetor[], int n){
 		heap_fuc(vetor, i, 0);
 	}//fim do for
 }//fim da funçâo heap_sort
+
+int main(){
+	int vetor[] = {5,1,6,4,8,3}; // 6 elementos
+	int n = sizeof(vetor)/sizeof(vetor[0]);
+
+	printf("**VETOR DESORDENADO**\n");
+
+	for (int h = 0; h < n; h++){
+		printf("Vetor-- [%d]\n", vetor[h]);
+	}
+
+	heap_sort(vetor, n);
+
+	printf("**VETOR ORDENANDO**\n");
+	for (int i = 0; i < n; i++)
+	{
+	    printf("-[%d]-\n", vetor[i]);
+
+	}
+	
+
+	return 0;
+}
