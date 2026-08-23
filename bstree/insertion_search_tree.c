@@ -3,8 +3,14 @@
 
 
 /*
+Complexidade temporal
+Melhor caso (árvore balanceada): O(log n).
+Pior caso (árvore degenerada): O(n).
+Caso médio: O(log n).
 
-
+Complexidade espacial
+Versão recursiva: O(h), em que h é a altura da árvore.
+Versão iterativa: O(1).
 */
 
 typedef struct Node
