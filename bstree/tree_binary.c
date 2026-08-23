@@ -54,3 +54,16 @@ Node* interative(arvore raiz, int valor){
     }
     return atual;
 }
+
+
+Node* criate_node(int valor){
+    Node* new = (Node*)malloc(sizeof(Node));
+    if (new != NULL)
+    {
+        new->data = valor;
+        new->esquerda = NULL;
+        new->direita = NULL;
+
+    }
+    return new;
+}
