@@ -8,8 +8,21 @@
 
 //Neste struct contém uma variavl do tipo inteira para os dados
 //É dois ponteiro que sera para no filhos direito e esquerdo
-struct Node {
+typedef struct Node {
     int data;
     struct Node* esquerda;
     struct Node* direita;
-};
+}Node ;
+
+//Ponteiro para raiz
+typedef Node* arvore;
+
+//Funçâo de busca recursiva
+Node* recursive(arvore raiz, int valor){
+    if (raiz == NULL || raiz->data == valor)
+    {
+        return raiz;
+        //caso esteja vazia ou o valor encontrado
+    }
+    
+}
