@@ -17,6 +17,7 @@ typedef struct Node {
 //Ponteiro para raiz
 typedef Node* arvore;
 
+
 //Funçâo de busca recursiva
 Node* recursive(arvore raiz, int valor){
     if (raiz == NULL || raiz->data == valor)
@@ -24,5 +25,32 @@ Node* recursive(arvore raiz, int valor){
         return raiz;
         //caso esteja vazia ou o valor encontrado
     }
+
+    if (valor < raiz->data)
+    {
+        //Se caso o valor seja menor que a raiz, busca recursiva para lado esquerdo
+        return recursive(raiz->esquerda, valor);
+    }
     
+    return recursive(raiz->direita, valor);
+    //Caso seja maior que a raiz entao busca ao lado esquerdo
+}
+
+
+// Funçao interaiva 
+Node* interative(arvore raiz, int valor){
+    Node* atual = raiz;
+
+    while (atual != NULL || atual->data != valor)
+    {
+        //While verifica se a arvore nao esta vazia ou se ja tenha encontrado o valor 
+        if (valor < atual->data)
+        {
+            return atual = atual->esquerda;
+        }else{
+            atual = atual->direita;
+        }
+        
+    }
+    return atual;
 }
