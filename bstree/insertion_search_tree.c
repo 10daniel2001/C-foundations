@@ -59,3 +59,59 @@ arvore insertion_recursive(arvore raiz, int valor){
     return raiz;
     
 }
+
+arvore interative_insertion(arvore raiz, int valor){
+    Node* novo = criar_no(valor);
+
+    if (novo == NULL)
+    {
+        printf("Erro ao alocar memoria\n");
+        return raiz;
+    }
+    if (raiz == NULL)
+    {
+        return novo;
+    }
+    Node* atual = raiz;
+    Node* pai = NULL;
+
+    while (atual != NULL)
+    {
+        pai = atual;
+        if (valor == atual->data)
+        {
+            printf("Valor %d já existe na árvore\n", valor);
+            free(novo);
+            return raiz;
+        }
+        if (valor < atual->data)
+        {
+            atual = atual->esquerda;
+        }else
+        {
+            atual = atual->direita;
+        }
+        
+    }
+        if (valor < pai->data)
+        {
+            pai->esquerda = novo;
+        }else
+        {
+            pai->direita = novo;
+        }
+        
+    
+    return novo;
+
+}
+
+
+void free_arvore(arvore raiz){
+    if (raiz == NULL) return;
+    free_arvore(raiz->esquerda);
+    free_arvore(raiz->direita);
+    free(raiz);
+    //Libera a memória alocada para a árvore
+    //Frees the memory allocated for the tree
+}
