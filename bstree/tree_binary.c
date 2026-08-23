@@ -56,7 +56,7 @@ Node* interative(arvore raiz, int valor){
 }
 
 
-Node* criate_node(int valor){
+Node* create_node(int valor){
     Node* new = (Node*)malloc(sizeof(Node));
     if (new != NULL)
     {
@@ -66,4 +66,38 @@ Node* criate_node(int valor){
 
     }
     return new;
+}
+
+// Função de demonstração
+void demonstrar_busca() {
+    // Construindo uma árvore de exemplo
+    arvore raiz = create_node(50);
+    raiz->esquerda = create_node(40);
+    raiz->direita = create_node(60);
+    raiz->esquerda->esquerda = create_node(30);
+    raiz->direita->direita = create_node(70);
+    raiz->esquerda->direita = create_node(20);
+    raiz->direita->esquerda = create_node(80);
+
+    Node* resultado_recursive = recursive(raiz, 30);
+
+    if (resultado_recursive != NULL)
+    {
+        printf("valor encontrado - %d -\n", resultado_recursive);
+    }else{
+        printf("Valor nâo encontrado\n");
+    }
+
+    Node* interative_busc = interative(raiz, 70);
+
+    if (interative_busc != NULL)
+    {
+        printf("Busca interativa valor [%d] \n", interative_busc);
+    }else{
+        printf("Valor nao encontrado\n");
+    }
+    
+    
+
+
 }
