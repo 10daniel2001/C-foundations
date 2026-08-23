@@ -28,12 +28,12 @@ Node* recursive(arvore raiz, int valor){
 
     if (valor < raiz->data)
     {
-        //Se caso o valor seja menor que a raiz, busca recursiva para lado esquerdo
+        
         return recursive(raiz->esquerda, valor);
     }
     
     return recursive(raiz->direita, valor);
-    //Caso seja maior que a raiz entao busca ao lado esquerdo
+  
 }
 
 
@@ -41,12 +41,12 @@ Node* recursive(arvore raiz, int valor){
 Node* interative(arvore raiz, int valor){
     Node* atual = raiz;
 
-    while (atual != NULL || atual->data != valor)
+    while (atual != NULL && atual->data != valor)
     {
         //While verifica se a arvore nao esta vazia ou se ja tenha encontrado o valor 
         if (valor < atual->data)
         {
-            return atual = atual->esquerda;
+             atual = atual->esquerda;
         }else{
             atual = atual->direita;
         }
@@ -83,7 +83,7 @@ void demonstrar_busca() {
 
     if (resultado_recursive != NULL)
     {
-        printf("valor encontrado - %d -\n", resultado_recursive);
+        printf("valor encontrado - %d -\n", resultado_recursive->data);
     }else{
         printf("Valor nâo encontrado\n");
     }
@@ -92,12 +92,23 @@ void demonstrar_busca() {
 
     if (interative_busc != NULL)
     {
-        printf("Busca interativa valor [%d] \n", interative_busc);
+        printf("Busca interativa valor [%d] \n", interative_busc->data);
     }else{
         printf("Valor nao encontrado\n");
     }
     
-    
+}
+
+void free_arvore(arvore raiz){
+    if (raiz == NULL) return;
+    free_arvore(raiz->esquerda);
+    free_arvore(raiz->direita);
+    free(raiz);
+}
 
 
+int main(){
+    demonstrar_busca();
+
+    return 0;
 }
