@@ -9,7 +9,7 @@ typedef struct Node
 
 }Node;
 
-typedef Node Arvore;
+typedef Node* Arvore;
 
 Node* criar_no(int valor){
     Node* novo = (Node*)malloc(sizeof(Node));
@@ -23,7 +23,7 @@ Node* criar_no(int valor){
     return novo;
 }
 
-int calcular_altura(Arvore* raiz){
+int calcular_altura(Arvore raiz){
     if (raiz == NULL)
     {
         return -1; // arvores vazia tem -1
@@ -31,5 +31,13 @@ int calcular_altura(Arvore* raiz){
     int altura_esquerda = calcular_altura(raiz->esquerdo);
     int altura_direita = calcular_altura(raiz->direito);
     return 1 + (altura_esquerda > altura_direita) ? altura_esquerda : altura_direita;
+    
+}
+int fator_balanceamento(Arvore raiz){
+    if (raiz == NULL)
+    {
+        return 0;
+    }
+    return calcular_altura(raiz->esquerdo) - calcular_altura(raiz->direito);
     
 }
