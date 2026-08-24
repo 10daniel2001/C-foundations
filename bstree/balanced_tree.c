@@ -23,6 +23,27 @@ Node* criar_no(int valor){
     return novo;
 }
 
+Arvore inserir(Arvore raiz, int valor){
+    if (raiz == NULL)
+    {
+        return criar_no(valor);
+    }
+    if (valor == raiz->data)
+    {
+        printf("Valor ja inserido %d\n", valor);
+        return raiz;
+    }
+    if (valor < raiz->data)
+    {
+        raiz->esquerdo = inserir(raiz->esquerdo, valor);
+    }else{
+        raiz->direito = inserir(raiz->direito, valor);
+    }
+    
+    return raiz;
+    
+}
+
 int calcular_altura(Arvore raiz){
     if (raiz == NULL)
     {
