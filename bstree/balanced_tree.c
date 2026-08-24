@@ -23,6 +23,20 @@ Node* criar_no(int valor){
     return novo;
 }
 
+Node* busca_recursiva(Arvore raiz, int valor){
+    if (raiz == NULL || raiz->data == valor)
+    {
+        return raiz;
+    }
+    if (valor < raiz->data)
+    {
+        return busca_recursiva(raiz->esquerdo, valor);
+    }
+    
+    return busca_recursiva(raiz->direito, valor);
+    
+}
+
 Arvore inserir(Arvore raiz, int valor){
     if (raiz == NULL)
     {
