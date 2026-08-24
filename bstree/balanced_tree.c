@@ -9,20 +9,27 @@ typedef struct Node
 
 }Node;
 
-typedef Node arvore;
+typedef Node Arvore;
 
-Node* criar_no(arvore raiz, int valor){
+Node* criar_no(int valor){
     Node* novo = (Node*)malloc(sizeof(Node));
-    if (novo == NULL)
+    if (novo != NULL)
     {
-        printf("Erro ao alocar espaço\n");
-        return 1;
-    }
-
     novo->data = valor;
     novo->esquerdo = NULL;
     novo->direito = NULL;
-
+    }
 
     return novo;
+}
+
+int calcular_altura(Arvore* raiz){
+    if (raiz == NULL)
+    {
+        return -1; // arvores vazia tem -1
+    }
+    int altura_esquerda = calcular_altura(raiz->esquerdo);
+    int altura_direita = calcular_altura(raiz->direito);
+    return 1 + (altura_esquerda > altura_direita) ? altura_esquerda : altura_direita;
+    
 }
