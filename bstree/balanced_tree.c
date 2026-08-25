@@ -76,3 +76,37 @@ int fator_balanceamento(Arvore raiz){
     return calcular_altura(raiz->esquerdo) - calcular_altura(raiz->direito);
     
 }
+
+void free_arvore(Arvore raiz){
+    if (raiz == NULL) return;
+    free_arvore(raiz->esquerdo);
+    free_arvore(raiz->direito);
+    free(raiz);
+    //Libera a memória alocada para a árvore
+    //Frees the memory allocated for the tree
+}
+void preordem(Arvore raiz){
+    if (raiz == NULL) return;
+    preordem(raiz->esquerdo);
+    printf("--%d--\n", raiz->data);
+    preordem(raiz->direito);
+}
+
+
+void montar_tree(){
+    Node* raiz = criar_no(50);
+    raiz->esquerdo = criar_no(30);
+    raiz->direito = criar_no(80);
+    raiz->direito->direito = criar_no(65);
+    raiz->esquerdo->esquerdo = criar_no(22);
+
+    preordem(raiz);
+
+
+    free_arvore(raiz);
+}
+
+int main(){
+
+    montar_tree();
+}
