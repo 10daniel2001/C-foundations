@@ -45,6 +45,11 @@ Node* busca_recursiva(Arvore raiz, int valor){
     
 }
 
+// Funçâo para inserir nós na arvore
+// 01 Sempre verificando se a arvore ou raiz e null, caso true retorna a funçao e cria com o valor inserido no parametro
+// 02 verifica se o valor inserido ja esta na arvore, se sim retorna raiz, é ecoa um mensagem
+// 03 Se o valor a ser inserido for menor que o Nò pai entao adiciona na subávore esquerda
+// 04 Else se nao Insere na subávore direita é fim retorna a raiz 
 Arvore inserir(Arvore raiz, int valor){
     if (raiz == NULL)
     {
@@ -66,6 +71,7 @@ Arvore inserir(Arvore raiz, int valor){
     
 }
 
+//
 int calcular_altura(Arvore raiz){
     if (raiz == NULL)
     {
