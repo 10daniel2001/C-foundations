@@ -12,6 +12,8 @@ typedef struct Node
 //Sempre iniciando com uma struct para representar o NO, ou raiz da árvore, dados em inteiros
 
 typedef Node* Arvore;
+// Ponteiro arvore para a struct Node typedef para encurta a escrita
+// Node criar no retorna um ponteiro novo, que aponta para um espaço na heap, cada espaço e um No que vai ocupar!
 
 Node* criar_no(int valor){
     Node* novo = (Node*)malloc(sizeof(Node));
@@ -25,6 +27,10 @@ Node* criar_no(int valor){
     return novo;
 }
 
+//Função de busca recursiva de valores na arvore
+//01 verificando se a raiz e null OU se o No pai e igual ao valor buscado, caso true retorna a raiz
+//02 se o valor buscado e menor que a raiz, faz um recursao ao lado esquerdo
+//03 se nao for maior return recusivo para o lado direito 
 Node* busca_recursiva(Arvore raiz, int valor){
     if (raiz == NULL || raiz->data == valor)
     {
