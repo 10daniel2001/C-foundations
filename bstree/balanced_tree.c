@@ -71,7 +71,12 @@ Arvore inserir(Arvore raiz, int valor){
     
 }
 
-//
+// Funçâo que retorna inteiros, como calculo da altura da arvore
+// 01 Verificando se a raiz e null, se true return -1 arvore vazia
+// 02 altura esquerda recebe a funçao calcular altura com o parametro raiz acessando a subávore esquerda
+// 03 altura direita recebe a funçao calcular altura com o parametro raiz acessando a subávore direita
+// 04 retorna uma soma de 1+ com um operador ternario como as subávore maior 
+
 int calcular_altura(Arvore raiz){
     if (raiz == NULL)
     {
