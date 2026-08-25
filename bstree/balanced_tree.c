@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct Node
 {
@@ -8,6 +9,7 @@ typedef struct Node
     struct Node* direito;
 
 }Node;
+//Sempre iniciando com uma struct para representar o NO, ou raiz da árvore, dados em inteiros
 
 typedef Node* Arvore;
 
