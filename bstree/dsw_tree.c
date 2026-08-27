@@ -46,4 +46,13 @@ Arvore rotaçao_direita(Arvore raiz){
     
 }
 
-
+Arvore rotaçao_direita(Arvore raiz){
+    if (raiz == NULL || raiz->direito == NULL)
+    {
+        return raiz;
+    }
+    Node* nova_raiz = raiz->direito;
+    raiz->direito = nova_raiz->esquerdo;
+    nova_raiz->esquerdo = raiz;
+    return nova_raiz;
+}
