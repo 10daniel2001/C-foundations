@@ -33,3 +33,17 @@ Node* criar_no(int valor){
     }
     return novo;
 }
+
+Arvore rotaçao_direita(Arvore raiz){
+    if (raiz == NULL || raiz->esquerdo == NULL)
+    {
+        return raiz;
+    }
+    Node* nova_raiz = raiz->esquerdo;
+    raiz->esquerdo = nova_raiz->direito;
+    nova_raiz->direito = raiz;
+    return nova_raiz;
+    
+}
+
+
