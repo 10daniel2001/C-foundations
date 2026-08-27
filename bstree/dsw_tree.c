@@ -56,3 +56,30 @@ Arvore rotaçao_direita(Arvore raiz){
     nova_raiz->esquerdo = raiz;
     return nova_raiz;
 }
+
+
+// Faze 01 criaçao do vine 
+int criar_vine(Arvore* raiz){
+    int contador = 0;
+    Node* pseudo_raiz = (Node*)malloc(sizeof(Node));
+    pseudo_raiz->direito = *raiz;
+    pseudo_raiz->esquerdo = NULL;
+    Node* atual = pseudo_raiz;
+
+    while (atual != NULL){
+        if (atual->direito->esquerdo != NULL)
+        {
+            Node* temp = atual->direito;
+            atual->direito = rotaçao_direita(temp);
+        }else
+        {
+            atual = atual->direito;
+            contador++;
+        }
+        
+        
+    }
+    *raiz = pseudo_raiz->direito;
+    free(pseudo_raiz);
+    return contador;
+}
