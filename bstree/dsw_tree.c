@@ -13,3 +13,23 @@
 
 
 // O codigo e o mesmo dos outros arquivos 
+
+typedef struct Node
+{
+    int data;
+    struct Node* esquerdo;
+    struct Node* direito;
+}Node;
+
+typedef Node* Arvore;
+
+Node* criar_no(int valor){
+    Node* novo = (Node*)malloc(sizeof(Node));
+
+    if (novo != NULL){
+    novo->data = valor;
+    novo->esquerdo = NULL;
+    novo->direito = NULL;
+    }
+    return novo;
+}
