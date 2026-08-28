@@ -83,3 +83,8 @@ int criar_vine(Arvore* raiz){
     free(pseudo_raiz);
     return contador;
 }
+
+//Balançeamento, cobertendo uma lista ligado e uma árvore balançeada
+int calcular_arvore(int n){
+    
+}
