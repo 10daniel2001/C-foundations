@@ -86,5 +86,6 @@ int criar_vine(Arvore* raiz){
 
 //Balançeamento, cobertendo uma lista ligado e uma árvore balançeada
 int calcular_arvore(int n){
-    
+    int altura = (int)floor(log2(n+1));
+    return (1 << altura) - 1 ;
 }
