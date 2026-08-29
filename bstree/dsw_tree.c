@@ -51,6 +51,16 @@ Node* criar_no(int valor){
     //Retorna um novo espaco ou Nó
 }
 
+
+/*Rotaçao a direita é basicamente pegar todos os nós da árvore e criar um lista ligada na subávore direita
+  Uma lista lígada linear sem hierárquia 
+  
+  Iniciando com um paramétro, com o ponteiro raiz
+  Um if paa verificar se a raiz esta vazia ou o no esuerdo esta vazio, caso verdadeiro retorna a raiz
+  Abaixo de if, após ser false, segue a continuação 
+  Um ponteiro chamado nova raiz é criado e recebe a raiza esquerda
+  raiz esquerda recebe a nova raiz direita   
+*/
 Arvore rotaçao_direita(Arvore raiz){
     if (raiz == NULL || raiz->esquerdo == NULL)
     {
