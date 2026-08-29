@@ -28,11 +28,12 @@
 
 typedef struct Node
 {
-    int data;
-    struct Node* esquerdo;
-    struct Node* direito;
+    int data; // dados em inteiros 
+    struct Node* esquerdo; // No esquerdo
+    struct Node* direito;  // No direito
 }Node;
 
+// Árvore  um ponteiro para o No
 typedef Node* Arvore;
 
 Node* criar_no(int valor){
