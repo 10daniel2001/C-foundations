@@ -38,13 +38,17 @@ typedef Node* Arvore;
 
 Node* criar_no(int valor){
     Node* novo = (Node*)malloc(sizeof(Node));
+    //Criando um espaço para um novo no
 
     if (novo != NULL){
+        //Verificando se o espaço foi alocado corretamente 
     novo->data = valor;
-    novo->esquerdo = NULL;
-    novo->direito = NULL;
+    //O valor inserido ao parametro sera atribuido para No raiz
+    novo->esquerdo = NULL; // Inicializando o Nó ou subávore esquerdo como vazio
+    novo->direito = NULL; // Da mesma forma para o Nó ou subávore direita 
     }
     return novo;
+    //Retorna um novo espaco ou Nó
 }
 
 Arvore rotaçao_direita(Arvore raiz){
