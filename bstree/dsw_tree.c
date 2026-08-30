@@ -153,3 +153,10 @@ void balancear_vine(Arvore* raiz, int n){
     *raiz = pseudo_raiz->direito;
     free(pseudo_raiz);
 }
+
+
+int main(){
+
+
+    return 0;
+}
