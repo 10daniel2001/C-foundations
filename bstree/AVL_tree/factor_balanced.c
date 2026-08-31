@@ -50,3 +50,32 @@ void atualizar_altura(NoAvl* no){
     }
     
 }
+
+
+double altura_maxima_teorica(int n) {
+    if (n <= 0) return -1;
+    return 1.44 * log2(n + 2) - 0.328;
+}
+// Função para analisar eficiência da árvore AVL
+void analisar_eficiencia_avl(NoAvl* raiz) {
+    if (raiz == NULL) {
+        printf("Árvore vazia\n");
+        return;
+    }
+    int num_nos = contar_nos_avl(raiz);
+    int altura_atual = altura_no(raiz);
+    double altura_teorica = altura_maxima_teorica(num_nos);
+    double altura_ideal = log2(num_nos + 1) - 1;
+    printf("=== Análise de Eficiência AVL ===\n");
+    printf("Número de nós: %d\n", num_nos);
+    printf("Altura atual: %d\n", altura_atual);
+    printf("Altura ideal: %.2f\n", altura_ideal);
+    printf("Altura máxima teórica: %.2f\n", altura_teorica);
+    printf("Eficiência: %.2f%% da altura ideal\n", 
+           (altura_ideal / altura_atual) * 100);
+    if (verificar_propriedade_avl(raiz)) {
+        printf("Status: Árvore AVL válida ✓\n");
+    } else {
+        printf("Status: Propriedade AVL violada ✗\n");
+    }
+}
