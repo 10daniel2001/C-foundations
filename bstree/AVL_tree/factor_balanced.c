@@ -19,3 +19,13 @@ int altura(NoAvl* no){
     }
     return no->altura;
 }
+
+int fator_balanced(NoAvl *no){
+    if (no == NULL)
+    {
+        return 0;
+    }
+
+    return fator_balanced(no->esquerdo) - fator_balanced(no->direito);
+    
+}
