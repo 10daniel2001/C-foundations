@@ -29,6 +29,16 @@ int fator_balanced(NoAvl *no){
     return fator_balanced(no->esquerdo) - fator_balanced(no->direito);
     
 }
+/*
+Fator = 0: as subárvores têm alturas iguais (perfeitamente balanceado)
+ 
+Fator = 1: a subárvore esquerda é uma unidade mais alta que a direita
+ 
+Fator = -1: a subárvore direita é uma unidade mais alta que a esquerda
+ 
+Fator > 1 ou < -1: violação da propriedade AVL (requer rebalanceamento)
+*/
+
 // Funçao para atualizar a altura de num nó
 void atualizar_altura(NoAvl* no){
     if (no != NULL)
