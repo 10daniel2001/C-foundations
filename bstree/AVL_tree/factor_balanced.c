@@ -79,3 +79,12 @@ void analisar_eficiencia_avl(NoAvl* raiz) {
         printf("Status: Propriedade AVL violada ✗\n");
     }
 }
+
+
+/*Em uma árvore binária comum há um certo risco de se degenerar em inserçoes linear crescente ou decrescente pode se torna uma lista lígada
+  operações que deveriam ser O(log n) virarem O(n).
+
+  Já a árvore AVL se alto balançeia, impondo uma regra, para cada nó, a diferença de altura entre a suávore esquerda é a subávore direita não pode ser maior que 1
+  
+
+*/
