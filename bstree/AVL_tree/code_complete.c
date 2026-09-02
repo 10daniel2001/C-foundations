@@ -34,3 +34,25 @@ int altura_no(Node *no){
     return no->altura;
     
 }
+
+int fator_balanceamento(Node* no){
+    if (no == NULL)
+    {
+        printf("Erro de analisar fb\n");
+        return;
+    }
+
+    return fator_balanceamento(no->esquerda) - fator_balanceamento(no->direita);
+    
+}
+
+void atualizar_altura(Node* no){
+    if (no != NULL)
+    {
+        int altura_esquerda = no->esquerda;
+        int altura_direita = no->direita;
+        no->altura = 1 + (altura_esquerda > altura_direita ? altura_esquerda : altura_direita);
+        no->falor_balanceamento = fator_balanceamento(no);  
+    }
+    
+}
