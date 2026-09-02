@@ -27,15 +27,6 @@ Node* criar_no(int valor){
     return novo;
 }
 
-ArvaoreAvl inserir(ArvaoreAvl* raiz, int valor){
-    if (raiz == NULL)
-    {
-        return criar_no(valor);
-    }
-    
-    
-}
-
 int altura_no(Node *no){
     if (no == NULL)
     {
@@ -67,6 +58,29 @@ void atualizar_altura(Node* no){
     }
     
 }
+
+ArvaoreAvl inserir(ArvaoreAvl raiz, int valor){
+    if (raiz == NULL)
+    {
+        return criar_no(valor);
+    }
+    if (valor < raiz->dados)
+    {
+        raiz->esquerda = inserir(raiz->esquerda, valor);
+    }else if (valor > raiz->dados)
+    {
+        raiz->direita = inserir(raiz->direita, valor);
+    }else {
+        printf("Valor %d já existe na árvore\n", valor);
+        return raiz;
+    }
+    
+    atualizar_altura(raiz);
+    return ;
+
+    
+}
+
 
 void mostrar_resultado(){
     
