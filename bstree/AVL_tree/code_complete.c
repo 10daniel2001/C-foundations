@@ -93,6 +93,15 @@ Node* rotacao_esquerda_avl(Node* raiz) {
     return nova_raiz;
 }
 
+Node* rotacao_direita_esquerda(Node* raiz){
+    if (raiz == NULL || raiz->esquerda == NULL)
+    {
+        return raiz
+    }
+    
+    
+}
+
 
 
 ArvaoreAvl inserir(ArvaoreAvl raiz, int valor){
