@@ -59,6 +59,42 @@ void atualizar_altura(Node* no){
     
 }
 
+
+Node* rotacao_direita(Node* raiz){
+    if (raiz == NULL || raiz->esquerda == NULL)
+    {
+        return NULL;
+    }
+    Node* nova_raiz = raiz->esquerda;
+    Node* subavore_temp = nova_raiz->direita;
+
+    nova_raiz->direita = raiz;
+    raiz->esquerda = subavore_temp;
+
+    atualizar_altura(raiz);
+    atualizar_altura(nova_raiz);
+    return nova_raiz;
+    
+}
+
+Node* rotacao_esquerda_avl(Node* raiz) {
+    if (raiz == NULL || raiz->direita == NULL) {
+        return raiz;  // Não é possível rotacionar
+    }
+    // Salva referências importantes
+    Node* nova_raiz = raiz->direita;
+    Node* subarvore_temp = nova_raiz->esquerda;
+    // Executa a rotação
+    nova_raiz->esquerda = raiz;
+    raiz->direita = subarvore_temp;
+    // Atualiza alturas
+    atualizar_altura(raiz);
+    atualizar_altura(nova_raiz);
+    return nova_raiz;
+}
+
+
+
 ArvaoreAvl inserir(ArvaoreAvl raiz, int valor){
     if (raiz == NULL)
     {
