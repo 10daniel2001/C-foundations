@@ -13,16 +13,27 @@ typedef struct Node
 
 typedef Node* ArvaoreAvl;
 
-Node criar_no(int valor){
+Node* criar_no(int valor){
    Node* novo = (Node*)malloc(sizeof(Node));
-    if (novo == NULL)
+    if (novo != NULL)
     {
-        printf("Falha ao criar nó\n");
-        return ;
-    }
     novo->dados = valor;
+    novo->altura = 0;
+    novo->falor_balanceamento = 0;
     novo->esquerda = NULL;
     novo->direita = NULL;
+    }
+
+    return novo;
+}
+
+ArvaoreAvl inserir(ArvaoreAvl* raiz, int valor){
+    if (raiz == NULL)
+    {
+        return criar_no(valor);
+    }
+    
+    
 }
 
 int altura_no(Node *no){
@@ -54,5 +65,9 @@ void atualizar_altura(Node* no){
         no->altura = 1 + (altura_esquerda > altura_direita ? altura_esquerda : altura_direita);
         no->falor_balanceamento = fator_balanceamento(no);  
     }
+    
+}
+
+void mostrar_resultado(){
     
 }
