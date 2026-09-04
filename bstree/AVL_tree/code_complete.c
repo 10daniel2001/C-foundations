@@ -26,7 +26,7 @@ Node* criar_no(int valor){
 
     /*Aqui vamos allocar um espaço em mémoria tamanho referente a struct 
       Novo é um ponteiro para Node, que recebe um espaço em memoria do tamanho de Node
-      Novo á chave para criar varios espaços em memória 
+      Novo á chave para criar varios espaços em memória, onde irá armazena ponteiros e dados 
     */
 
     Node* novo = (Node*)malloc(sizeof(Node));
@@ -41,6 +41,8 @@ Node* criar_no(int valor){
 
     return novo;
 }
+
+//Funçao para saber a altura da árvore 
 
 int altura_no(Node *no){
     if (no == NULL)
@@ -111,7 +113,7 @@ Node* rotacao_esquerda_avl(Node* raiz) {
 Node* rotacao_direita_esquerda(Node* raiz){
     if (raiz == NULL || raiz->esquerda == NULL)
     {
-        return raiz
+        return raiz;
     }
 
     
