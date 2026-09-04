@@ -3,6 +3,14 @@
 
 typedef struct Node
 {
+    /*Está struct é a base da estrutura da árvore
+      Dados será o dado que cada nó terá 
+      Altura refere-sé a cada altura da subávore ate a raiz
+      fator balanceamento é a difrença da alturas das duas subávores 
+      Ponteiro esquerda refere ao lado esquerdo da árvore
+      ponteiro para estruct Node
+
+    */
     int dados;
     int altura;
     int falor_balanceamento;
@@ -12,9 +20,16 @@ typedef struct Node
 }Node;
 
 typedef Node* ArvaoreAvl;
+// Ponteiro para a struct Node 
 
 Node* criar_no(int valor){
-   Node* novo = (Node*)malloc(sizeof(Node));
+
+    /*Aqui vamos allocar um espaço em mémoria tamanho referente a struct 
+      Novo é um ponteiro para Node, que recebe um espaço em memoria do tamanho de Node
+      Novo á chave para criar varios espaços em memória 
+    */
+
+    Node* novo = (Node*)malloc(sizeof(Node));
     if (novo != NULL)
     {
     novo->dados = valor;
@@ -98,7 +113,7 @@ Node* rotacao_direita_esquerda(Node* raiz){
     {
         return raiz
     }
-    
+
     
 }
 
