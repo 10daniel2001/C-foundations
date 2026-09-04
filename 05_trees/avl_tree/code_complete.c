@@ -65,6 +65,16 @@ int fator_balanceamento(Node* no){
     
 }
 
+
+
+
+
+
+
+
+
+
+
 void atualizar_altura(Node* no){
     if (no != NULL)
     {

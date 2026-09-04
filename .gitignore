@@ -18,3 +18,8 @@ data_structures/linked_list
 data_structures/Matrix
 data_structures/stack
 data_structures/string_binary_tree
+
+# Binários compilados (adicionado pelo script de reorganização)
+*.out
+*.o
+*.exe
