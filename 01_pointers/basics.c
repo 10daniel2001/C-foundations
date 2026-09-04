@@ -9,6 +9,7 @@
    #include e para uso de bibliotecas e apis em C
    codigo basico e explicativo
 
+
 */
 
 #include <stdio.h>

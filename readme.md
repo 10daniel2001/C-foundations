@@ -30,5 +30,4 @@ This repository is for studying the fundamentals of the C language, focusing on 
 
 - `pointers`: Contains examples and explanations about pointers in C, including function pointers, structure pointers, and advanced pointer manipulation techniques.
 
-- `my_codes`: Contains implementations of personal codes in C, including personal projects, programming challenges, and code examples for study.
-
+- `my_codes`: Contains implementations of personal codes in C, including personal projects, programming challenges, and code examples for study !!
