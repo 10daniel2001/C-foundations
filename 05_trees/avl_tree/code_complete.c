@@ -135,6 +135,9 @@ Node* rotacao_esquerda_direita(Node* raiz){
         {
             return raiz;
         }
+
+        raiz->esquerda = rotacao_esquerda_avl(raiz);
+        return rotacao_direita(raiz);
         
 }
 
