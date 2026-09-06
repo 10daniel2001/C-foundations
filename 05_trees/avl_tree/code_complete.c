@@ -121,12 +121,21 @@ Node* rotacao_esquerda_avl(Node* raiz) {
 }
 
 Node* rotacao_direita_esquerda(Node* raiz){
-    if (raiz == NULL || raiz->esquerda == NULL)
+    if (raiz == NULL || raiz->direita == NULL)
     {
         return raiz;
     }
 
-    
+    raiz->direita = rotacao_direita(raiz->direita);
+    return rotacao_esquerda_avl(raiz);
+
+}
+Node* rotacao_esquerda_direita(Node* raiz){
+        if (raiz == NULL || raiz->esquerda)
+        {
+            return raiz;
+        }
+        
 }
 
 
