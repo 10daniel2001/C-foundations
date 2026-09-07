@@ -26,6 +26,6 @@ void macro_basica(){
 #define MAX(a, b) ((a) > (b) ? (a):(b))
 
 void macro_com_parametros(){
-    int result = QUADRADO(5);
-    int maior = MAX(10, 50);
+    int result = QUADRADO(5); // 5x5=25
+    int maior = MAX(10, 50); // 10 > 50 = false = 50
 }
