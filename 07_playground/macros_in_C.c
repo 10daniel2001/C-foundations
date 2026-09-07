@@ -29,3 +29,11 @@ void macro_com_parametros(){
     int result = QUADRADO(5); // 5x5=25
     int maior = MAX(10, 50); // 10 > 50 = false = 50
 }
+
+// O do { ... } while(0) é um truque
+// comum para que a macro funcione corretamente mesmo dentro de um if sem chaves.
+#define TROCA(a, b, tipo) do { \
+    tipo = temp = a            \
+    a = b                      \
+    b = temp                   \
+} while (0);
