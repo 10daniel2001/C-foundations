@@ -14,3 +14,8 @@ o texto da macro no código antes da compilação propriamente dita
 #define PI 3.14159
 #define TAMANHO 50
 
+void macro_basica(){
+    int vetor[TAMANHO];//vetor de 50 indices
+    double area = PI ; // area e o valor de PI
+}
+// Toda vez que o compilador encontra PI ou MAX_TAMANHO, ele substitui pelo valor literal antes de compilar.
