@@ -19,3 +19,13 @@ void macro_basica(){
     double area = PI ; // area e o valor de PI
 }
 // Toda vez que o compilador encontra PI ou MAX_TAMANHO, ele substitui pelo valor literal antes de compilar.
+
+//Macro com parâmetros (função-like)
+//Macros também podem se comportar como funções:
+#define QUADRADO(x) ((x) * (x))
+#define MAX(a, b) ((a) > (b) ? (a):(b))
+
+void macro_com_parametros(){
+    int result = QUADRADO(5);
+    int maior = MAX(10, 50);
+}
