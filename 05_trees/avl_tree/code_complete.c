@@ -97,12 +97,6 @@ Node* balancear(ArvaoreAvl raiz){
     
 }
 
-
-
-
-
-
-
 void atualizar_altura(Node* no){
     if (no != NULL)
     {
@@ -169,8 +163,6 @@ Node* rotacao_esquerda_direita(Node* raiz){
         
 }
 
-
-
 ArvaoreAvl inserir(ArvaoreAvl raiz, int valor){
     if (raiz == NULL)
     {
@@ -188,7 +180,7 @@ ArvaoreAvl inserir(ArvaoreAvl raiz, int valor){
     }
     
     atualizar_altura(raiz);
-    return ;
+    return balancear(raiz);
 
     
 }
