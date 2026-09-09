@@ -66,8 +66,14 @@ int fator_balanceamento(Node* no){
 }
 
 
+Node* balancear(ArvaoreAvl raiz){
 
-
+    if (raiz == NULL)
+    {
+        return raiz;
+    }
+    
+}
 
 
 
