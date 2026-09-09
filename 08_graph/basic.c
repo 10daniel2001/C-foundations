@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 #define Tamm 5
-
+// Constante global com tamanho fixo definido
+// Ou macro 
 
 void grafos(){
 
+    // Matriz do tipo inteiro para representar 
     int graphh[Tamm][Tamm] = {0};
 
     graphh[0][1] = 1;
