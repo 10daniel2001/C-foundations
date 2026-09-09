@@ -84,9 +84,16 @@ Node* balancear(ArvaoreAvl raiz){
     {
         return rotacao_esquerda_avl(raiz);
     }
+    if (fator > 1 && fator_balanceamento(raiz->esquerda) < 0) {
+        return rotacao_esquerda_direita(raiz);
+    }
+    // Caso RL: Rotação dupla direita-esquerda
+    if (fator < -1 && fator_balanceamento(raiz->direita) > 0) {
+        return rotacao_direita_esquerda(raiz);
+    }
+    // Nó já está balanceado
+    return raiz;
     
-    
-
     
 }
 
