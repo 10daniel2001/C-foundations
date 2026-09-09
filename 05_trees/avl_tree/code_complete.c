@@ -72,6 +72,21 @@ Node* balancear(ArvaoreAvl raiz){
     {
         return raiz;
     }
+    atualizar_altura(raiz);
+
+    int fator = fator_balanceamento(raiz);
+
+    if (fator > 1 && fator_balanceamento(raiz->esquerda) >= 0)
+    {
+        return rotacao_direita(raiz);
+    }
+    if (fator < -1 && fator_balanceamento(raiz->direita) <= 0)
+    {
+        return rotacao_esquerda_avl(raiz);
+    }
+    
+    
+
     
 }
 
