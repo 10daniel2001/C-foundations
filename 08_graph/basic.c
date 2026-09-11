@@ -34,6 +34,9 @@ printf("\n");
         printf("\n");
     }
     
+    /*Codigo didatico para grafos
+      nao muito util, mas serve para mostrar a ideia de como funciona a matriz de adjacencia
+    */
 
 
 
