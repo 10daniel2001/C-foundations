@@ -4,10 +4,13 @@
 
 int main() {
 int resultado, pid, ppid;
+// Cria um novo processo usando a função fork(). O processo filho recebe um valor de retorno igual a 0,
+// enquanto o processo pai recebe o PID do processo filho.
 
 resultado = fork();
 
 if (resultado < 0)
+// Se o valor de retorno for negativo, significa que houve um erro na criação do processo filho.
 
 printf("Algo deu errado!!!\n");
 
