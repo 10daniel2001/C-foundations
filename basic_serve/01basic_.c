@@ -13,8 +13,22 @@
 int main(){
     int fd_serve, fd_cliente;
     char buffer[TAM_BUFFER];
-    struct sockaddr* endereco;
+    struct sockaddr_in endereco;
     int tamanho_endereco = sizeof(endereco);
     char *msg_boas_vinda = "Ola, Você esta concetado";
+
+    fd_serve = socket(AF_INET, SOCK_STREAM, 0);
+    // Cria um espaço em mémoria para armazenar o endereco e a porta e o buffer 
+    // É retorna um "FILE DESCRIPTO", do tipo inteiro.
+    if (fd_serve < 0)
+    {
+        printf("Erro ao Criar socket\n");
+        exit(EXIT_FAILURE);
+    }
+
+    endereco.sin_family = AF_INET;
+    endereco.sin_addr.s_addr = INADDR_ANY;
+    endereco.sin_port = htons(PORTA);
+    
 
 }
