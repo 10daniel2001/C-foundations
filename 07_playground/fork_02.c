@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/wait.h>
+#include <stdio.h>   // Biblioteca para usar a função printf() é necessária para imprimir mensagens na tela.
+#include <unistd.h>  // Biblioteca para usar a função fork() é necessária para criar um novo processo.
+#include <sys/wait.h> // Biblioteca para usar a função waitpid() é necessária para aguardar o término do processo filho.
 
 int main() {
 int resultado, pid, ppid;
