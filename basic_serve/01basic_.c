@@ -26,9 +26,9 @@ int main(){
         exit(EXIT_FAILURE);
     }
 
-    endereco.sin_family = AF_INET;
-    endereco.sin_addr.s_addr = INADDR_ANY;
-    endereco.sin_port = htons(PORTA);
+    endereco.sin_family = AF_INET; // Para ipv4
+    endereco.sin_addr.s_addr = INADDR_ANY; // Para aceitar qualquer Ip
+    endereco.sin_port = htons(PORTA); // Para 
     
 
 }
