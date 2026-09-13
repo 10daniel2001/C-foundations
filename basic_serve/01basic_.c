@@ -34,8 +34,21 @@ int main(){
     if (bind(fd_serve, (struct sockaddr *)&endereco, sizeof(endereco)) < 0)
     {
         perror("Erro ao fazer o bind\n");
+        close(fd_serve);
         exit(EXIT_FAILURE);
     }
+
+    // Listen para aceitar conexoes, socket em modo de escuta
+    // No total, apenas 5 conexoes
+    if (listen(fd_serve, 5) < 0)
+    {
+        perror("Erro no listen");
+        close(fd_serve);
+        exit(EXIT_FAILURE);
+    }
+    
+    printf("Servidor escutando na porta %d...\n", PORTA);
+
     
     
 
