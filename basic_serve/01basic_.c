@@ -29,6 +29,14 @@ int main(){
     endereco.sin_family = AF_INET; // Para ipv4
     endereco.sin_addr.s_addr = INADDR_ANY; // Para aceitar qualquer Ip
     endereco.sin_port = htons(PORTA); // Para 
+
+    // Faz o BIND do socket com o endereço/porta configurados
+    if (bind(fd_serve, (struct sockaddr *)&endereco, sizeof(endereco)) < 0)
+    {
+        perror("Erro ao fazer o bind\n");
+        exit(EXIT_FAILURE);
+    }
+    
     
 
 }
