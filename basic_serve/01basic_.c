@@ -61,11 +61,20 @@ int main(){
         send(fd_cliente, msg_boas_vinda, strlen(msg_boas_vinda), 0);
 
         memset(buffer, 0, TAM_BUFFER);
+        int bytes_lido = read(fd_cliente, buffer, TAM_BUFFER - 1);
+        if (bytes_lido > 0)
+        {
+            printf("Mensagem do cliente: %s\n", buffer);
+        }
+        close(fd_cliente);
+        printf("Sessao terminada para cliente\n");
         
     }
     
 
-    
-    
+    close(fd_serve);
+    printf("Servidor terminado com sucesso\n");
 
+    
+ return 0;
 }
