@@ -1,3 +1,13 @@
+/*Para iniciar este servidor basico e necessario o uso de outro terminal 
+  Para compilar - gcc 01basic.c -o run
+  ./run -> Um terminal ser aberto !
+  Para o lado do cliente e necessario rodar este comando em outro terminal -> nc 127.0.0.1 8080
+
+*/
+
+
+
+
 #include <stdio.h> // Biblioteca padrao de entradada e saida 
 #include <stdlib.h> // Para o uso do free, ou allocar memoria
 #include <string.h> // Para uso de funçoes para strings
