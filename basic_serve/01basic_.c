@@ -49,6 +49,22 @@ int main(){
     
     printf("Servidor escutando na porta %d...\n", PORTA);
 
+    while (1)
+    {
+        fd_cliente = accept(fd_serve, (struct sockaddr *) &endereco, (socklen_t*)&tamanho_endereco);
+        if (fd_cliente < 0)
+        {
+            perror("Erro de accept");
+            continue;
+        }
+        printf("Cliente conectado com sucesso\n");
+        send(fd_cliente, msg_boas_vinda, strlen(msg_boas_vinda), 0);
+
+        memset(buffer, 0, TAM_BUFFER);
+        
+    }
+    
+
     
     
 
